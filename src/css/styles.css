@@ -1,9 +1,6 @@
-/**
-  |============================
-  | include css partials with
-  | default @import url()
-  |============================
-*/
+@import url('flatpickr/dist/flatpickr.min.css');
+@import url('izitoast/dist/css/iziToast.min.css');
+
 /* Common styles */
 @import url('./reset.css');
 @import url('./base.css');
@@ -16,3 +13,4 @@
 @import url('./badges.css');
 @import url('./back-link.css');
 @import url('./footer.css');
+@import url('./timer.css');
