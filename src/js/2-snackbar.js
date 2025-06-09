@@ -8,13 +8,15 @@ function onSubmit(event) {
     event.preventDefault();
     const delayValue = Number(form.elements.delay.value)
     const radioValue = form.elements.state.value
-    const promise  = new Promise((resolve, reject) => {
-        if (radioValue === 'fulfilled') {
-            resolve(delayValue)
-        } else {
-            reject(delayValue)
-        }
-     }, delayValue);
+    const promise = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                if (radioValue === 'fulfilled') {
+                    resolve(delayValue);
+                } else {
+                    reject(delayValue);
+                }
+            }, delayValue);
+        });
 
 
      promise.then(delay => {
